@@ -1,4 +1,4 @@
-import { Glass } from './models/glass.js';
+// import { Glass } from './models/glass.js';
 
 let glass = {};
 
@@ -18,7 +18,7 @@ const renderGlassesList = () => {
     let content = dataGlasses.reduce((total, ele) => {
         total += `
             <div class="col-4">
-                <img style="cursor: pointer;" class="img-fluid" src="../${ele.src}" onclick="chooseGlass('${ele.id}')">
+                <img style="cursor: pointer;" class="img-fluid" src="${ele.src}" onclick="chooseGlass('${ele.id}')">
             </div>
         `;
         return total;
@@ -43,7 +43,7 @@ window.chooseGlass = (id) => {
 
 const renderToModel = (ele, check) => {
     if (check) {
-        const content = `<img src="../${ele.img}"></img>`;
+        const content = `<img src="${ele.img}"></img>`;
         document.getElementById('avatar').innerHTML = content;
         const description = `
         <h3>${ele.name} - ${ele.brand} (${ele.color})</h3>

@@ -1,4 +1,5 @@
-export class Glass{
+// export class Glass{
+class Glass{
     constructor(id, img, brand, name, color, price, desc){
         this.id = id;
         this.img = img;
